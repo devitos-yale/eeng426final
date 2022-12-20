@@ -1,1 +1,28 @@
-Test
+move to 19 14 
+label MOVE_RIGHT 
+move to 20 17 
+label MOVE_RIGHT 
+move to 20 17 
+label MOVE_RIGHT 
+move to 20 17 
+label MOVE_RIGHT 
+move to 19 22 
+label MOVE_RIGHT 
+move to 19 22 
+label MOVE_RIGHT 
+move to 13 14 
+label MOVE_RIGHT 
+move to 13 14 
+label MOVE_LEFT 
+move to 13 14 
+label MOVE_LEFT 
+move to 9 13 
+label MOVE_LEFT 
+move to 14 14 
+label MOVE_RIGHT 
+move to 9 17 
+label MOVE_LEFT 
+move to 8 10 
+label MOVE_LEFT 
+move to 8 10 
+label MOVE_LEFT 

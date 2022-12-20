@@ -20,8 +20,9 @@ if (sys.argv[1][-5:] != ".rect"):
 old_rect_file = open(sys.argv[1], "r")
 
 #create new magic script for labels
-new_scr = open("labels.scr","w+")
-new_scr.write("Test")
+labels = open("labels.scr","w+")
+
+#get rid of exsisting labels for visibility
 
 #look at each line in input .rect file
 for line in old_rect_file:
@@ -52,9 +53,15 @@ for p in ports:
 		#check bottom right corner of each other port
 		if ((int(rest[3]) > xmin and int(rest[3]) < xmax) and (int(rest[4]) > ymin and int(rest[4]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
+			#print ("MOVE LEFT")
+			labels.write("move to %d %d \n" % (int(p[3]), int(p[4])))
+			labels.write("label MOVE_LEFT \n")
 		
 		#check upper left corner of each other port
 		if ((int(rest[5]) > xmin and int(rest[5]) < xmax) and (int(rest[6]) > ymin and int(rest[6]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
+			#print ("MOVE RIGHT")
+			labels.write("move to %d %d \n" % (int(p[5]), int(p[6])))
+			labels.write("label MOVE_RIGHT \n")
 
-new_scr.close()
+labels.close()
