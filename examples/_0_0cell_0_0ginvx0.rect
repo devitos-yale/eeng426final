@@ -1,0 +1,72 @@
+bbox 0 0 24 32
+rect in[0] polysilicon 13 3 15 5
+rect out ndiffusion 19 7 20 10
+rect in[0] polysilicon 13 11 15 13
+rect in[0] polysilicon 13 18 15 21
+rect out pdiffusion 19 22 20 25
+rect in[0] polysilicon 13 27 15 29
+rect out ndiffusion 16 7 19 10
+rect in[0] polysilicon 13 14 15 17
+rect out pdiffusion 16 22 19 25
+rect out ndiffusion 15 5 20 7 right
+rect out ndiffusion 15 7 16 10 right
+rect out ndiffusion 15 10 20 11 right
+rect GND ndiffusion 12 7 13 10 left
+rect in[0] polysilicon 10 14 13 17
+rect out pdiffusion 15 21 20 22 right
+rect out pdiffusion 15 22 16 25 right
+rect out pdiffusion 15 25 20 27 right
+rect Vdd pdiffusion 12 22 13 25 left
+rect in[0] ntransistor 13 5 15 11
+rect GND ndiffusion 9 7 12 10
+rect in[0] polysilicon 9 13 15 14
+rect in[0] polysilicon 9 14 10 17
+rect in[0] polysilicon 9 17 15 18
+rect in[0] ptransistor 13 21 15 27
+rect Vdd pdiffusion 9 22 12 25
+rect GND ndiffusion 8 5 13 7 left
+rect GND ndiffusion 8 7 9 10
+rect GND ndiffusion 8 10 13 11 left
+rect Vdd pdiffusion 8 21 13 22 left
+rect Vdd pdiffusion 8 22 9 25
+rect Vdd pdiffusion 8 25 13 27 left
+rect out pdc 16 22 19 25
+rect out ndc 16 7 19 10
+rect in[0] pc 10 14 13 17
+rect GND ndc 9 7 12 10
+rect Vdd pdc 9 22 12 25
+outrect out m1 16 6 19 7
+outrect out m1 16 7 19 10
+outrect out m1 16 10 19 14
+outrect out m1 16 14 20 17
+outrect out m1 16 17 19 22
+outrect out m1 16 22 19 25
+outrect out m1 16 25 19 26
+rect GND m1 12 7 13 10
+inrect in[0] m1 10 13 13 14
+inrect in[0] m1 10 14 13 17
+inrect in[0] m1 10 17 13 18
+rect GND m1 9 7 12 10
+rect Vdd m1 9 21 12 22
+rect Vdd m1 9 22 12 25
+rect Vdd m1 9 25 12 26
+rect GND m1 8 7 9 10
+rect in[0] mcon 10 14 13 17
+rect GND mcon 9 7 12 10
+rect Vdd mcon 9 22 12 25
+rect GND m2 12 7 13 10
+inrect in[0] m2 13 14 14 17
+rect Vdd m2 12 22 13 25
+rect GND m2 9 7 12 10
+inrect in[0] m2 9 13 14 14
+inrect in[0] m2 10 14 13 17
+inrect in[0] m2 9 16 10 17
+inrect in[0] m2 9 17 14 18
+rect Vdd m2 9 22 12 25
+rect GND m2 8 6 13 7
+rect GND m2 8 7 9 10
+rect GND m2 8 10 13 11
+inrect in[0] m2 8 14 10 16
+rect Vdd m2 8 21 13 22
+rect Vdd m2 8 22 9 25
+rect Vdd m2 8 25 13 26

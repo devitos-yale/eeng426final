@@ -19,6 +19,10 @@ if (sys.argv[1][-5:] != ".rect"):
 #read in rect file
 old_rect_file = open(sys.argv[1], "r")
 
+#create new magic script for labels
+new_scr = open("labels.scr","w+")
+new_scr.write("Test")
+
 #look at each line in input .rect file
 for line in old_rect_file:
 	a = line.split()
@@ -52,3 +56,5 @@ for p in ports:
 		#check upper left corner of each other port
 		if ((int(rest[5]) > xmin and int(rest[5]) < xmax) and (int(rest[6]) > ymin and int(rest[6]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
+
+new_scr.close()
