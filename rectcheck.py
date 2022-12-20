@@ -16,7 +16,7 @@ if (sys.argv[1][-5:] != ".rect"):
   sys.exit (1)
   
 
-#create new .rect file to edit
+#read in rect file
 old_rect_file = open(sys.argv[1], "r")
 
 #look at each line in input .rect file
@@ -41,13 +41,14 @@ for line in old_rect_file:
 #check if the ports are < port_distance from each other
 for p in ports:
 	xmin = int(p[3]) - port_distance
-	print(xmin)
 	xmax = int(p[5]) + port_distance
 	ymin = int(p[4]) - port_distance
 	ymax = int(p[6]) + port_distance
 	for rest in ports:
-		if ((int(rest[3]) > xmin and int(rest[3]) < xmax) or (int(rest[5]) > xmin and int(rest[5]) < xmax)) and (rest[1] != p[1]):
+		#check bottom right corner of each other port
+		if ((int(rest[3]) > xmin and int(rest[3]) < xmax) and (int(rest[4]) > ymin and int(rest[4]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
-		if ((int(rest[4]) > ymin and int(rest[4]) < ymax) or (int(rest[6]) > ymin and int(rest[6]) < ymax)) and (rest[1] != p[1]):
+		
+		#check upper left corner of each other port
+		if ((int(rest[5]) > xmin and int(rest[5]) < xmax) and (int(rest[6]) > ymin and int(rest[6]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
-
