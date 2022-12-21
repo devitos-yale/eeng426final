@@ -64,14 +64,12 @@ for p in ports:
 		#check bottom right corner of each other port
 		if ((int(rest[3]) > xmin and int(rest[3]) < xmax) and (int(rest[4]) > ymin and int(rest[4]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
-			#print ("MOVE LEFT")
 			labels.write("move to %d %d \n" % (int(p[3]), int(p[4])))
 			labels.write("label MOVE_LEFT \n")
 		
 		#check upper left corner of each other port
 		if ((int(rest[5]) > xmin and int(rest[5]) < xmax) and (int(rest[6]) > ymin and int(rest[6]) < ymax)) and (rest[1] != p[1]):
 			print(rest)
-			#print ("MOVE RIGHT")
 			labels.write("move to %d %d \n" % (int(p[5]), int(p[6])))
 			labels.write("label MOVE_RIGHT \n")
 
