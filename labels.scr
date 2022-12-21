@@ -1,28 +1,42 @@
-move to 19 14 
+move to 43 19 
 label MOVE_RIGHT 
-move to 20 17 
+move to 43 39 
 label MOVE_RIGHT 
-move to 20 17 
+move to 43 39 
 label MOVE_RIGHT 
-move to 20 17 
+move to 43 39 
 label MOVE_RIGHT 
-move to 19 22 
-label MOVE_RIGHT 
-move to 19 22 
-label MOVE_RIGHT 
-move to 13 14 
-label MOVE_RIGHT 
-move to 13 14 
+move to 39 17 
 label MOVE_LEFT 
-move to 13 14 
+move to 39 17 
 label MOVE_LEFT 
-move to 9 13 
-label MOVE_LEFT 
-move to 14 14 
+move to 58 18 
 label MOVE_RIGHT 
-move to 9 17 
+move to 39 17 
 label MOVE_LEFT 
-move to 8 10 
+move to 58 18 
+label MOVE_RIGHT 
+move to 39 17 
 label MOVE_LEFT 
-move to 8 10 
+move to 58 18 
+label MOVE_RIGHT 
+move to 39 18 
+label MOVE_LEFT 
+move to 34 35 
+label MOVE_LEFT 
+move to 35 16 
+label MOVE_LEFT 
+move to 35 16 
+label MOVE_LEFT 
+move to 58 17 
+label MOVE_RIGHT 
+move to 35 16 
+label MOVE_LEFT 
+move to 58 17 
+label MOVE_RIGHT 
+move to 35 16 
+label MOVE_LEFT 
+move to 58 17 
+label MOVE_RIGHT 
+move to 39 37 
 label MOVE_LEFT 
