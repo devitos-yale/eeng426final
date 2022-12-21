@@ -5,7 +5,7 @@ Rectcheck.py is a tool created by Sophia DeVito and Tanya Shibu as a final proje
 ---
 Specifically, this tool identifies three key problems that may lead to DRC errors when a cell is routed:
 1. It ensures that all of the elements that the router might choose as connection ports are a minimum distance of **port_distance** away from each other. This is in order to avoid ports being so close to each other that the routed connections connect to more than one accidentally. The minimum distance value can be changed depending on the design rules or routing expectations for the cell. 
-2. It checks the distance between the outer edge of the routable ports and the perimeter of the cell, using a distance of **VARIABLE HERE**. If the router is trying to connect to a port that is too close to the center of the cell, it again may accidentally connected to more than the intended metal. This variable is also editable.
+2. It checks the distance between the outer edge of the routable ports and the perimeter of the cell, using a distance of **VARIABLE HERE**. If the router is trying to connect to a port that is too close to the center of the cell, it again may accidentally connected to more than the intended metal. This variable is also editable. (TO BE COMPLETED)
 3. It ensures that there is a m2 connection for Vdd and GND. If there is not, the router will have trouble making these connections.
 ---
 To use this tool, follow these steps in the docker container:
@@ -20,3 +20,15 @@ To use this tool, follow these steps in the docker container:
 This repo includes a few example .rect files to demonstrate the capabilities of this tool. Here is a visual of the generated labels for the  *_0_0std_0_0cells_0_0AND2X1.rect* file (included in the exampples folder). It identifies that the metal wires on either side of the rightmost polysilicon are too close to each other, which might be difficult for the router to handle. So our tool has flagged their wires and instructed to user to move them apart using 'MOVE RIGHT' and 'MOVE LEFT' labels.
 
 ![Labeled AND Cell](examples/LabeledAND.png)
+
+---
+Sophia's Contribution:
+- Wrote python code to 
+  - Read in .rect files and check arguments
+  - Generate magic script with labels
+  - Go through .rect file and identify ports and other metal sections
+  - Make sure there is m2 connected to GND and Vdd
+  - Check if ports are too close to each other, and label those errors
+- Added example files to run the python script on
+- Wrote first draft of the README file, including instructions on how to run the tool
+- Last commit:
