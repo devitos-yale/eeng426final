@@ -22,7 +22,7 @@ This repo includes a few example .rect files to demonstrate the capabilities of 
 ![Labeled AND Cell](examples/LabeledAND.png)
 
 ---
-Sophia's Contribution:
+**Sophia's Contribution:**
 - Wrote python code to 
   - Read in .rect files and check arguments
   - Generate magic script with labels
@@ -31,4 +31,4 @@ Sophia's Contribution:
   - Check if ports are too close to each other, and label those errors
 - Added example files to run the python script on
 - Wrote first draft of the README file, including instructions on how to run the tool
-- Last commit:
+- Last commit: [95d124f9d9227e13f73e0d14f20b7ffc4553f3cd](https://github.com/devitos-yale/eeng426final/commit/95d124f9d9227e13f73e0d14f20b7ffc4553f3cd)
