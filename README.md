@@ -17,4 +17,6 @@ To use this tool, follow these steps in the docker container:
 6. Manually select the bottom left corner of the selection window
 7. Run `source labels.tcl` to generate the suggested edits to your cell
 ---
-This repo includes a few example .rect files to demonstrate the capabilities of this tool. Here is a visual of the generated labels for the  *_0_0std_0_0cells_0_0AND2X1.rect* file (included in the exampples folder)
+This repo includes a few example .rect files to demonstrate the capabilities of this tool. Here is a visual of the generated labels for the  *_0_0std_0_0cells_0_0AND2X1.rect* file (included in the exampples folder). It identifies that the metal wires on either side of the rightmost polysilicon are too close to each other, which might be difficult for the router to handle. So our tool has flagged their wires and instructed to user to move them apart using 'MOVE RIGHT' and 'MOVE LEFT' labels.
+
+![Labeled AND Cell](examples/LabeledAND.png)
