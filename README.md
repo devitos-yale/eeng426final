@@ -33,7 +33,7 @@ This repo includes a few example files to demonstrate the capabilities of this t
 
 ![Labeled AND Cell](examples/LabeledAND.png)
 
-Also in /examples/MUX2X1, there is an mag file showing the result of rectcheck2.py, as well as the labels.scr script and .rect file used to produce it. Here is a screenshot showing the warning labels and relabeled ports:
+Also in /examples/MUX2X1, *mux2x1_rectcheck2_result.mag* shows the result of *rectcheck2.py* on *_0_0std_0_0cells_0_0MUX2X1.rect*. The MUX2X1 directory also includes  the labels.scr generated. Here is a screenshot showing the warning labels and relabeled ports:
 
 ![Labeled MUX2X1 Cell](examples/MUX2X1/mux2x1_result.png)
 
