@@ -50,7 +50,7 @@ Also in /examples/MUX2X1, there is an mag file showing the result of rectcheck2.
 - Last commit: [95d124f9d9227e13f73e0d14f20b7ffc4553f3cd](https://github.com/devitos-yale/eeng426final/tree/95d124f9d9227e13f73e0d14f20b7ffc4553f3cd)
 
 **Tanya's Contribution:**
-- Wrote rectcheck2.py and functions.py to add onto sophia's rectcheck.py. 
+- Wrote rectcheck2.py and functions.py to add onto rectcheck.py. 
   - Parse .rect file to get unique I/O names for the cell, identify ports and obstacles, and other info
   - Looks for eligible ports (i.e. wires that router may connect to). Code does not depend on 'inrect' or 'outrect', since this may not always be present
   - Check 1: Ports must be close enough to top/bottom perimeter
