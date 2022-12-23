@@ -1,16 +1,23 @@
 # Post-Wiring Pre-Routing .Rect File Design Checker
 
-Rectcheck.py is a tool created by Sophia DeVito and Tanya Shibu as a final project for Silicon Compilation (EENG 426). It is a python script that is designed to identify elements in a .rect file that may be difficult for the router to handle, and will therefore cause DRC violations once the cell is routed using the interact tool. Once it identifies these possible problem areas, it generates a magic script to label them, so that the user can easily edit the cell and avoid the error. To decide which elements might cause issues, the tool takes into account the design strategies we discovered through trial and error in Lab 4. It is editible so that it is useful for different design rules and requirements.
+Rectcheck is a tool created by Sophia DeVito and Tanya Shibu as a final project for Silicon Compilation (EENG 426). It is a python script that is designed to identify elements in a .rect file that may be difficult for the router to handle, and will therefore cause DRC violations once the cell is routed using the interact tool. Once it identifies these possible problem areas, it generates a magic script to label them, so that the user can easily edit the cell and avoid the error. To decide which elements might cause issues, the tool takes into account the design strategies we discovered through trial and error in Lab 4. It is editible so that it is useful for different design rules and requirements.
+
+Note: Due to issues with TritonRoute, this checker is based only on lessons learned for GND/Vdd routing. Also, the checker assumes router connects only vertically. With improvements, this would be converted into a editable parameter depending on what the user wants. 
 
 ---
-Specifically, this tool identifies three key problems that may lead to DRC errors when a cell is routed:
+Specifically, this tool identifies four key problems that may lead to DRC errors when a cell is routed:
+
 In rectcheck.py:
+
 1. It ensures that all of the elements that the router might choose as connection ports are a minimum distance of **port_distance** away from each other. This is in order to avoid ports being so close to each other that the routed connections connect to more than one accidentally. The minimum distance value can be changed depending on the design rules or routing expectations for the cell. 
-2. It ensures that there is a m2 connection for Vdd and GND. If there is not, the router will have trouble making these connections.
+
+3. It ensures that there is a m2 connection for Vdd and GND. If there is not, the router will have trouble making these connections.
 
 In rectcheck2.py (with functions.py)
+
 3. It checks the distance between the outer edge of eligible wires (that the router sees as options to connect to) and the perimeter of the cell. If the router is trying to connect to a port that is too far from the perimeter, it again may accidentally connect to more than the intended metal. 
-4. It checks if there are other m2 wires close to the edge (but not an intended port/not the closest) which may result in DRC violations or shorts when the router makes a contact, since the distance between these would be too small.  
+
+5. It checks if there are other m2 wires close to the edge (but not an intended port/not the closest) which may result in DRC violations or shorts when the router makes a contact, since the distance between these would be too small.  
 
 ---
 To use this tool, follow these steps in the docker container:
@@ -28,7 +35,7 @@ This repo includes a few example files to demonstrate the capabilities of this t
 
 Also in /examples/MUX2X1, there is an mag file showing the result of rectcheck2.py, as well as the labels.scr script and .rect file used to produce it. Here is a screenshot showing the warning labels and relabeled ports:
 
-![Labeled MUX2X1 Cell](examples/mux2x1_result.png)
+![Labeled MUX2X1 Cell](examples/MUX2X1/mux2x1_result.png)
 
 ---
 **Sophia's Contribution:**
