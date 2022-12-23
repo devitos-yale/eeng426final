@@ -1,0 +1,46 @@
+move to 0 -4
+label WARNINGS right
+move to 16 53
+label EXTEND_Vdd_HERE
+move to 72 39
+label Vdd
+port make
+move to 0 -8
+label Router's_path_to_GND_is_blocked right
+move to 62 14
+label GND
+port make
+move to 67 8
+label B
+port make
+move to 0 -12
+label Router's_path_to_A_is_blocked right
+move to 14 12
+label A
+port make
+move to 57 11
+label S
+port make
+move to 56 39
+label Y
+port make
+move to 78 8 
+label M2_ON_EDGE 
+move to 75 8 
+label M2_ON_EDGE 
+move to 74 7 
+label M2_ON_EDGE 
+move to 74 8 
+label M2_ON_EDGE 
+move to 38 11 
+label M2_ON_EDGE 
+move to 38 12 
+label M2_ON_EDGE 
+move to 35 11 
+label M2_ON_EDGE 
+move to 34 10 
+label M2_ON_EDGE 
+move to 34 11 
+label M2_ON_EDGE 
+move to 34 14 
+label M2_ON_EDGE 
